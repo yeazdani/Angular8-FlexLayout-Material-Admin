@@ -1,0 +1,85 @@
+<mat-card>
+  <div fxLayout="row" fxLayout.xs="colunm">
+    <div>
+      <button mat-button (click)="drawerStart.toggle()">
+        <mat-icon class="material-icons">
+          menu</mat-icon>
+      </button>
+    </div>
+
+    <span class="align-right"></span>
+    <!-- Right Contents -->
+    <div fxLayoutAlign="center center">
+      <button mat-button (click)="openDialog()">
+        <mat-icon class="material-icons">
+          search
+        </mat-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon class="material-icons">
+        account_circle
+      </mat-icon>
+      <mat-icon class="material-icons">
+        keyboard_arrow_down
+      </mat-icon>
+    </button>
+
+    <div>
+      <button mat-button (click)="drawerEnd.toggle()">
+        <mat-icon class="material-icons">
+          menu</mat-icon>
+      </button>
+    </div>
+
+  </div>
+  <!-- Left Content -->
+
+</mat-card>
+
+<mat-drawer-container class="drawer-container">
+  <mat-drawer #drawerStart class="sidenav" mode="side" opened>
+    <mat-accordion>
+      <mat-expansion-panel class="top-padding">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Dashboard
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="">
+          <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active">Dashboard
+          </a>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Profile
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div>
+          <a [routerLink]="['/profile']" routerLinkActive="router-link-active" class="text-center">Profile</a>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-drawer>
+
+  <!-- Router OutLet -->
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+
+  <mat-drawer #drawerEnd class="sidenav-end" position="end">
+    <mat-tab-group>
+      <mat-tab label="First"> Content 1 </mat-tab>
+      <mat-tab label="Second"> Content 2 </mat-tab>
+    </mat-tab-group>
+
+  </mat-drawer>
+</mat-drawer-container>

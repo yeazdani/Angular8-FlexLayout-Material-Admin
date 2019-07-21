@@ -1,0 +1,11 @@
+@import "../../sass/colorVariable";
+
+footer {
+  .container {
+    padding: 30px;
+  }
+  min-height: 300px;
+  bottom: 0px;
+  background: $accentColor;
+
+}

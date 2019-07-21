@@ -1,0 +1,75 @@
+<div >
+  <div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facilis aut sunt laborum pariatur non, impedit
+      debitis dolor facere adipisci sint voluptatibus explicabo in ut suscipit magnam sit enim similique!
+    </div>
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt dignissimos perferendis magnam adipisci.
+      Dolore
+      maiores dolor asperiores atque eum accusamus odit, numquam fugit laudantium quidem porro maxime inventore ex
+      assumenda.
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptas consequuntur delectus dolor!
+      Dolor,
+      odit. Similique quas dolorem, nemo ducimus cum accusantium quasi. Molestiae beatae recusandae sint
+      dignissimos,
+      atque unde!
+    </div>
+
+  </div>
+
+  <div>
+    <div>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef> Weight </th>
+          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef> Symbol </th>
+          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+    </div>
+  </div>
+
+</div>
+
+<div fxLayout='column' class="zero">
+
+  <div fxFlex="33" [fxFlex.md]="box1Width" class="one">1stHello</div>
+  <div fxFlex="33" [fxLayout]="direction" fxLayout.md="row" class="two">
+
+    <div fxFlex="22" fxFlex.md="10px" fxHide.lg class="two_one">Hello</div>
+    <div fxFlex="205px" fxFlex.md="65" class="two_two">Hello</div>
+    <div fxFlex="30px" fxFlex.md="25" fxShow [fxHide.md]="hideBox" class="two_three">Hello</div>
+
+  </div>
+  <div fxFlex class="three">Hello</div>
+
+</div>

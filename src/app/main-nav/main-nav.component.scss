@@ -1,0 +1,57 @@
+@import "../../sass/colorVariable";
+@import "~@angular/material/theming";
+.drawer-container {
+  width: 100%;
+}
+mat-drawer-content {
+  background-color: #ebebeb;
+}
+mat-card {
+  border-radius: 0px;
+  color: white;
+  background: #58329c;
+}
+.top-padding {
+  margin-top: 20px;
+}
+.align-right {
+  flex: 1 1 auto;
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #EBEBEB;
+}
+
+mat-expansion-panel {
+  margin-top: 8px;
+}
+.material-icons {
+  color: $textIconColor;
+  padding-top: 5px;
+}
+.fiztriz-brand {
+  padding-top: 7px;
+  color: $textIconColor;
+}
+table {
+  width: 100%;
+}
+mat-expansion-panel {
+  width: 100%;
+}
+
+footer {
+  height: 300px;
+  background: $darkPrimaryColor;
+}
+
+a {
+  color: $primaryTextColor;
+}
+.bg {
+  background: rebeccapurple;
+}
+mat-drawer-content {
+  min-height: 1000px;
+}
