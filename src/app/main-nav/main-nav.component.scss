@@ -4,7 +4,7 @@
   width: 100%;
 }
 mat-drawer-content {
-  background-color: #ebebeb;
+  background-color: #f5f4f4;
 }
 mat-card {
   border-radius: 0px;
@@ -20,7 +20,7 @@ mat-card {
 
 .sidenav {
   width: 250px;
-  background-color: #EBEBEB;
+  background-color: #f5f4f4;
 }
 
 mat-expansion-panel {
@@ -29,10 +29,6 @@ mat-expansion-panel {
 .material-icons {
   color: $textIconColor;
   padding-top: 5px;
-}
-.fiztriz-brand {
-  padding-top: 7px;
-  color: $textIconColor;
 }
 table {
   width: 100%;

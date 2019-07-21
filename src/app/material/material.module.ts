@@ -32,7 +32,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 
 const MaterialComponents = [
   BrowserAnimationsModule,
@@ -67,7 +66,6 @@ const MaterialComponents = [
   MatTableModule,
   MatSortModule,
   MatPaginatorModule,
-  NgMatSearchBarModule
 ];
 
 @NgModule({

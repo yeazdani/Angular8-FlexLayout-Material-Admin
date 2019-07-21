@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusinessComponent implements OnInit {
   typesOfShoes: string[] = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
-  constructor() { }
 
   ngOnInit() {
 
